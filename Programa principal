@@ -1,0 +1,59 @@
+#include <iostream>
+#include <locale.h>
+#include "funcao.h"
+#define n 10
+
+int main() {
+	int i, v[n],op;
+	setlocale(LC_ALL,"Portuguese");
+	
+	for(i=0; i<n; i++)
+	{
+		printf("Escreva um numero da posição %d do vetor:",(i+1));
+		scanf("%d",&v[i]);
+	}
+	
+	/*for(i=0; i<10; i++)
+	{
+		printf("/ %d",v[i]);
+	}*/
+	
+	printf("Qual vc deseja usar para Classificar?\n");
+	printf("===============================\n");
+	printf("====     1-Bubble Sort     ====\n");
+	printf("====     2-Selction Sort   ====\n");
+	printf("====     3-Insertion Sort  ====\n");
+	printf("===============================\n");
+	scanf("%d",&op);
+	
+	switch(op)
+	{
+		case 1:
+			bs(v,n);
+			for(i=0; i<n; i++)
+			{
+				printf("/ %d",v[i]);
+			}
+		break;
+		
+		case 2:
+			ss(v,n);
+			for(i=0; i<n; i++)
+			{
+				printf("/ %d",v[i]);
+			}
+		break;
+		case 3:
+			is(v,n);	
+			for(i=0; i<n; i++)
+			{
+				printf("/ %d",v[i]);
+			}
+		break;
+		default:
+			printf("Numero Invalido!!!!!!!!!!");
+			
+	}
+		
+	
+}
